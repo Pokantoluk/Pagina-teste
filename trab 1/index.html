@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Formulário</title>
+
+    <!-- Incluir jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Incluir Plugin de máscara do jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+
+    <!-- Link para o css stylesheet -->
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+
+  <body>
+    <div class="form-box">
+      <form id="form">
+        <div class="form-group">
+          <label for="nome">Nome:</label>
+          <input type="texto" id="nome" class="form-control" pattern="[a-zA-Z\s]+" maxlength="100" required autocomplete="name">
+        </div>
+
+        <div class="form-group">
+          <label for="telefone">Telefone fixo:</label>
+          <input type="texto" id="telefone" class="form-control">
+        </div>
+
+        <div class="form-group">
+          <label for="celular">Celular:</label>
+          <input type="texto" id="celular" class="form-control" required autocomplete="tel">
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" id="email" class="form-control" required autocomplete="email">
+        </div>
+
+        <div class="form-group">
+          <label for="numero">Número:</label>
+          <input type="numero" id="numero" name="numero" min="1" max="999" class="form-control" required>
+        </div>
+        <input type="submit" class="btn" value="Enviar">
+      </form>
+    </div>
+    <div class="form-box">
+      <div id="info">
+        <ul>
+          <li>Número divisivel por 3: Primeiro nome</li>
+          <li>Número divisivel por 5: DDD do telefone e do celular</li>
+          <li>Número divisivel por 7: Domínio do email</li>
+          <li>Outros números: quantidade de letras no nome e quantidade de caracteres no email</li>
+        </ul>
+      </div>
+    </div>
+    <!-- aplica a máscara aos telefones -->
+    <script src="index.js"></script>
+  </body>
+</html>
